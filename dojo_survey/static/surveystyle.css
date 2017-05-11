@@ -1,0 +1,19 @@
+form, .info {
+  border: 1px solid black;
+  width: 40%;
+  padding: 20px;
+  margin: 20px;
+}
+
+h3 {
+  text-decoration: underline;
+}
+
+.errors {
+  color: red;
+  margin-left: 20px;
+}
+
+.back {
+  border: none;
+}
