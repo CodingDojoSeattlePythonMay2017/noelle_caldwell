@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='regformstyle.css') }}">
+  </head>
+  <body>
+    <h1>Registration Form</h1>
+    <div class="errors">
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+            <p>{{ message }}</p>
+          {% endfor %}
+          {% endif %}
+      {% endwith %}
+    </div>
+    <form class="" action="/process" method="post">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" name="fname" placeholder="First Name">
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" name="lname" placeholder="Last Name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" name="email" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <label for="birthday">Birthdate (mm/dd/yyyy)</label>
+        <input type="text" class="form-control" name="birthdate" placeholder="Birthdate">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" name="password" placeholder="Password">
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" class="form-control" name="cpassword" placeholder="Confirm Password">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </body>
+</html>
