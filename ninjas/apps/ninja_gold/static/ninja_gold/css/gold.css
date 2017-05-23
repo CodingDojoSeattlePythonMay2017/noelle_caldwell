@@ -1,0 +1,26 @@
+* {
+  text-align: center;
+}
+
+#wrapper {
+  width: 900px;
+  font-family: monospace;
+  padding: 10px;
+}
+
+form {
+  display: inline-block;
+  width: 20%;
+  margin: auto;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+textarea {
+  border: 1px solid black;
+}
+
+.reset {
+  margin: auto;
+  border: none;
+}

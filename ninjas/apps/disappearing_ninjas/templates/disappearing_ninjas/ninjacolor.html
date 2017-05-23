@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ninjas by Color!</title>
+    {% load staticfiles %}
+    <style media="screen">
+      * {text-align: center;}
+    </style>
+  </head>
+  <body>
+    {% with 'disappearing_ninjas/images/'|add:color|add:'.jpg' as imgString %}
+    <img src="{% static imgString %}" alt="">
+    {% endwith %}
+  </body>
+</html>
